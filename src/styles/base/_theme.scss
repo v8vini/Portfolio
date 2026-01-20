@@ -1,0 +1,23 @@
+@use "variables" as v;
+
+:root {
+  --bg: #{v.$bg-dark};
+  --surface: #{v.$surface-dark};
+  --primary: #{v.$primary-dark};
+  --text: #{v.$text-dark};
+  --muted: #{v.$muted-dark};
+  --border: #{v.$border-dark};
+  --shadow: #{v.$shadow-dark};
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #{v.$bg-light};
+    --surface: #{v.$surface-light};
+    --primary: #{v.$primary-light};
+    --text: #{v.$text-light};
+    --muted: #{v.$muted-light};
+    --border: #{v.$border-light};
+    --shadow: #{v.$shadow-light};
+  }
+}
