@@ -1,10 +1,16 @@
 @use "base/variables";
 @use "base/theme";
 @use "base/reset";
+@use "base/swiper";
 
 @use "layout/header";
 
 @use "sections/hero";
 @use "sections/skills";
+@use "sections/portfolio";
+@use "sections/about";
+@use "sections/stats";
 
+
+@use "components/cards";
 @use "components/buttons";

@@ -67,3 +67,48 @@ const techDescriptions = {
     });
   });
 }
+
+// 
+const statsSection = document.querySelector('.stats-container');
+const statNumbers = document.querySelectorAll('.stat-number');
+
+if (statsSection) {
+
+  const statsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statsSection.classList.add('show');
+        startStatsCounters();
+        statsObserver.unobserve(statsSection);
+      }
+    });
+  }, {
+    threshold: 0.4
+  });
+
+  statsObserver.observe(statsSection);
+}
+
+/* Contadores */
+
+// function startStatsCounters() {
+//   statNumbers.forEach(counter => {
+//     const target = +counter.dataset.target;
+//     let current = 0;
+
+//     const increment = Math.max(1, Math.floor(target / 60));
+
+//     const update = () => {
+//       current += increment;
+
+//       if (current >= target) {
+//         counter.textContent = target + (target > 1 ? "+" : "");
+//       } else {
+//         counter.textContent = current;
+//         requestAnimationFrame(update);
+//       }
+//     };
+
+//     update();
+//   });
+// }

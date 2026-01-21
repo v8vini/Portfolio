@@ -1,0 +1,31 @@
+/* =========================
+   Swiper
+========================= */
+
+.portfolio-slider {
+  padding-bottom: 70px;
+}
+
+.swiper-pagination-bullet {
+  background: oklch(59.1% 0.293 322.896);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: oklch(59.1% 0.293 322.896);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.4);
+  backdrop-filter: blur(6px);
+  top: 45%;
+  transition: .2s ease;
+
+  &:hover {
+    background: rgba(0,0,0,.7);
+  }
+
+  &::after {
+    font-size: 18px;
+  }
+}
